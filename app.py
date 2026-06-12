@@ -18,7 +18,7 @@ with open("tokenizer.pkl", "rb") as f:
 st.title("📩 Spam Detection using LSTM")
 
 st.write(
-    "Enter a message below and check whether it is Spam or Ham."
+    "Enter a message below and check whether it is Spam or Not spam."
 )
 
 message = st.text_area("Enter SMS Message")
@@ -47,5 +47,5 @@ if st.button("Predict"):
             )
         else:
             st.success(
-                f"Ham Message\nConfidence: {(1-score):.2%}"
+                f"Not spam Message\nConfidence: {(1-score):.2%}"
             )
